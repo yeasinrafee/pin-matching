@@ -36,3 +36,19 @@ document.getElementById('calculator').addEventListener('click', function(event){
         inputField.value += typedValue;
     }
 })
+
+document.getElementById('btn-submit').addEventListener('click', function(){
+    const pinField = document.getElementById('display-pin').value;
+    const typedField = document.getElementById('calc-input').value;
+
+    const displaySuccess = document.getElementById('pin-success');
+    const displayFail = document.getElementById('pin-fail');
+
+    if(pinField === typedField){
+        displaySuccess.style.display = 'block';
+        displayFail.style.display = 'none';
+    }else{
+        displayFail.style.display = 'block';
+        displaySuccess.style.display = 'none';
+    }
+ })
